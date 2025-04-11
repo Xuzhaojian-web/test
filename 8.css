@@ -1,0 +1,121 @@
+       * {
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: '微软雅黑', sans-serif;
+        }
+
+        body {
+            background-color: #f5f3f0;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .highlight {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(45deg, #00EE76, #a87c52);
+            color: white;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .highlight h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .gallery-section, .recommendations {
+            margin: 40px 0;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .section-title { 
+            /* 第二行注释 */
+            font-size: 1.8em;
+            color: gray;
+            border-left: 4px solid #8b5a2b;
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 800px;
+            width: 400px;
+            background: #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 1.0s ease;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 也可以尝试 object-fit: contain; 根据需求选择 */
+        }    
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .recommendations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .recommendation-card {
+            padding: 20px;
+            background: #fffaf5;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .highlight h1 {
+                font-size: 2em;
+            }
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            list-style: none; /* 去除默认列表符号 */
+            padding: 0; /* 清除默认内边距 */
+            gap: 30px; /* 控制菜单项之间的间距 */
+        }
+        
+        /* 列表项样式 */
+        .nav-list li {
+            letter-spacing: 3px;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background: hwb(120 5% 22%);
+            transition: all 0.3s;
+        }
+        
+        .nav-list li:hover {
+            letter-spacing: 2px;    /* 悬停放大间距 */
+            background: #e9ecef;
+        }
